@@ -1,27 +1,44 @@
-import 'package:matrix_case/matrix_case.dart';
-import 'package:matrix_case/printMatrix.dart';
+import 'dart:io';
+
 void main() {
-  List<List<int>> A = [
-    [1, 2],
-    [3, 4],
-  ];
+  print("=== Program Nilai Mahasiswa Sederhana ===");
 
-  List<List<int>> B = [
-    [5, 6],
-    [7, 8],
-  ];
+  stdout.write("Masukkan nama mahasiswa: ");
+  String? nama = stdin.readLineSync();
 
-  print('Matriks A:');
-  printMatrix(A);
+  stdout.write("Masukkan usia mahasiswa: ");
+  int usia = int.parse(stdin.readLineSync()!);
 
-  print('Matriks B:');
-  printMatrix(B);
+  stdout.write("Masukkan nilai tugas: ");
+  double tugas = double.parse(stdin.readLineSync()!);
 
-  List<List<int>> C = tambahMatriks(A, B);
-  print('Hasil penjumlahan A + B:');
-  printMatrix(C);
+  stdout.write("Masukkan nilai UTS: ");
+  double uts = double.parse(stdin.readLineSync()!);
 
-  List<List<int>> D = kaliMatriks(A, B);
-  print('Hasil perkalian A * B:');
-  printMatrix(D);
+  stdout.write("Masukkan nilai UAS: ");
+  double uas = double.parse(stdin.readLineSync()!);
+
+  double rataRata = (tugas + uts + uas) / 3;
+
+  String status;
+  if (rataRata >= 80) {
+    status = "Lulus dengan predikat A";
+  } else if (rataRata >= 70) {
+    status = "Lulus dengan predikat B";
+  } else if (rataRata >= 60) {
+    status = "Lulus dengan predikat C";
+  } else {
+    status = "Tidak Lulus";
+  }
+
+  print("\n=== Hasil Akhir ===");
+  print("Nama  : $nama");
+  print("Usia  : $usia tahun");
+  print("Nilai Tugas : $tugas");
+  print("Nilai UTS   : $uts");
+  print("Nilai UAS   : $uas");
+  print("Rata-rata   : ${rataRata.toStringAsFixed(2)}");
+  print("Status      : $status");
+
+  print("\nTerima kasih Soedtizen!");
 }
