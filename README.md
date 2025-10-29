@@ -1,28 +1,29 @@
-🎓 PRAKTIKUM PEMROGRAMAN DART — Program Nilai Mahasiswa
+# 🎓 PRAKTIKUM PEMROGRAMAN DART — Program Nilai Mahasiswa
 
-Nama: Prasetyo Angga Permana
-NIM: H1D023028
-Shift Awal: A Shift Baru: A
+**Nama:** Prasetyo Angga Permana  
+**NIM:** H1D023028  
+**Shift Awal:** A  
+**Shift Baru:** A  
 
-1️⃣ Deskripsi Program
+---
 
-Program ini merupakan contoh sederhana dari penerapan dasar pemrograman Dart dengan konsep:
+## 📝 Deskripsi Program
+Program ini merupakan contoh sederhana dari penerapan dasar **pemrograman Dart** dengan konsep:
 
-Input data dari pengguna
+- Input data dari pengguna  
+- Operasi aritmetika *(menghitung rata-rata)*  
+- Penggunaan logika kondisi *(if–else)*  
+- Output hasil kelulusan ke layar  
 
-Operasi aritmetika (menghitung rata-rata)
+---
 
-Penggunaan logika kondisi (if–else)
+## 🔁 Alur Program
+**Start → Input Data Mahasiswa → Hitung Rata-Rata → Tentukan Predikat → Tampilkan Hasil → End*
 
-Output hasil kelulusan ke layar
+---
 
-Tujuan utama program ini adalah untuk menghitung rata-rata nilai mahasiswa dari nilai Tugas, UTS, dan UAS, kemudian menampilkan status kelulusan berdasarkan hasil tersebut.
-
-2️⃣ Alur Program
-
-Start → Input Data Mahasiswa → Hitung Rata-Rata → Tentukan Predikat → Tampilkan Hasil → End
-
-3️⃣ Kode Program
+## 💻 Kode Program
+```dart
 import 'dart:io';
 
 void main() {
@@ -68,16 +69,24 @@ void main() {
   print("\nTerima kasih Soedtizen!");
 }
 
-4️⃣ Penjelasan Kode (Bagian Penting)
-Bagian Kode	Penjelasan
-import 'dart:io';	Mengimpor library untuk input (stdin) dan output (stdout).
-stdin.readLineSync()	Membaca input dari keyboard dalam bentuk teks.
-int.parse() / double.parse()	Mengubah input teks menjadi angka agar bisa dihitung.
-(tugas + uts + uas) / 3	Menghitung rata-rata nilai mahasiswa.
-if–else	Menentukan status kelulusan berdasarkan rata-rata nilai.
-toStringAsFixed(2)	Menampilkan rata-rata dengan dua angka di belakang koma.
-5️⃣ Contoh Output
-=== Program Nilai Mahasiswa Sederhana ===
+```
+
+----
+
+| Bagian Kode                      | Penjelasan                                                 |
+| -------------------------------- | ---------------------------------------------------------- |
+| `import 'dart:io';`              | Mengimpor library untuk input (stdin) dan output (stdout). |
+| `stdin.readLineSync()`           | Membaca input dari keyboard dalam bentuk teks.             |
+| `int.parse()` / `double.parse()` | Mengubah input teks menjadi angka agar bisa dihitung.      |
+| `(tugas + uts + uas) / 3`        | Menghitung rata-rata nilai mahasiswa.                      |
+| `if–else`                        | Menentukan status kelulusan berdasarkan rata-rata nilai.   |
+| `toStringAsFixed(2)`             | Menampilkan rata-rata dengan dua angka di belakang koma.   |
+
+
+----
+
+##Contoh Output
+```=== Program Nilai Mahasiswa Sederhana ===
 Masukkan nama mahasiswa: Budi
 Masukkan usia mahasiswa: 19
 Masukkan nilai tugas: 80
@@ -94,3 +103,6 @@ Rata-rata   : 80.00
 Status      : Lulus dengan predikat A
 
 Terima kasih Soedtizen!
+```
+
+
